@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#6f4e37" />
+  <meta name="description" content="手机端五子棋：玩家与电脑对战，支持普通、强势和碾压难度。" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>五子棋</title>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">GOMOKU · OFFLINE</p>
+        <h1>五子棋</h1>
+        <p class="subtitle">你执黑先手。三档电脑棋力，越往后越不讲情面。</p>
+      </div>
+      <div class="turn-card" aria-live="polite">
+        <span>当前回合</span>
+        <strong id="turnText">你下</strong>
+      </div>
+    </header>
+
+    <section class="controls" aria-label="游戏设置">
+      <label>
+        <span>电脑难度</span>
+        <select id="difficulty">
+          <option value="normal">普通 · 会攻会守</option>
+          <option value="strong" selected>强势 · 两层预判</option>
+          <option value="crushing">碾压 · 威胁搜索</option>
+        </select>
+      </label>
+      <div class="button-row">
+        <button id="undoButton" type="button" class="secondary">悔棋</button>
+        <button id="restartButton" type="button" class="primary">重新开始</button>
+      </div>
+      <p id="difficultyNote" class="note">强势：候选排序 + 两层预判</p>
+    </section>
+
+    <section class="game-area">
+      <div class="board-frame">
+        <canvas id="board" role="img" aria-label="十五乘十五五子棋棋盘，点击交叉点落子"></canvas>
+      </div>
+      <p id="status" class="status" aria-live="polite">点棋盘交叉点落子。</p>
+    </section>
+
+    <footer>
+      <span>黑棋：玩家</span>
+      <span>白棋：电脑</span>
+      <span>本地运行 · 无需联网</span>
+    </footer>
+  </main>
+
+  <script src="game.js" defer></script>
+</body>
+</html>

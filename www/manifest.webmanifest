@@ -1,0 +1,18 @@
+{
+  "name": "五子棋：玩家 vs 电脑",
+  "short_name": "五子棋",
+  "description": "离线可玩的手机五子棋，包含普通、强势与碾压三档电脑难度。",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3ead8",
+  "theme_color": "#6f4e37",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
